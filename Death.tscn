@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cgihma628861t"]
+
+[ext_resource type="Script" uid="uid://f4nq7r8fsht5" path="res://death_zone.gd" id="1_0gyil"]
+
+[node name="DeathZone" type="Area2D" unique_id=1708932557]
+visibility_layer = 2
+position = Vector2(0, 400)
+input_pickable = false
+script = ExtResource("1_0gyil")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

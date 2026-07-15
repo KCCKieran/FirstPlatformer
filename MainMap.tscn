@@ -1,0 +1,43 @@
+[gd_scene format=4 uid="uid://b8ix8hebslu15"]
+
+[ext_resource type="Texture2D" uid="uid://0ftsnxtlc8uc" path="res://SideView_Grass.aseprite" id="1_ifu8d"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x4u1r"]
+texture = ExtResource("1_ifu8d")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -2.132038, -5.9900074, -6.8022118, -3.1472921, -6.0915337, 8, 8, 8)
+0:0/0/physics_layer_0/polygon_0/one_way = true
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 8, 8, 8)
+1:0/0/physics_layer_0/polygon_0/one_way = true
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 2.132038, -5.9900074, 6.8022118, -3.1472921, 6.0915337, 8, -8, 8)
+2:0/0/physics_layer_0/polygon_0/one_way = true
+3:0/0 = 0
+4:0/0 = 0
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-0.81220627, -8, -8, -8, -8, 8, -0.81220627, 8)
+0:1/0/physics_layer_0/polygon_0/one_way = true
+1:1/0 = 0
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(0.81220627, -8, 8, -8, 8, 8, 0.81220627, 8)
+2:1/0/physics_layer_0/polygon_0/one_way = true
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(4.873226, -8, 3.147293, -5.786956, 3.3503418, -3.1472921, 6.2945824, -1.3198318, 8, -1.2183065, 8, -8)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.873226, -8, -3.147293, -5.786956, -3.3503418, -3.1472921, -6.2945824, -1.3198318, -8, -1.2183065, -8, -8)
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.873226, -8, -3.147293, -5.786956, -3.3503418, -3.1472921, -6.2945824, -1.3198318, -8, -1.2183065, -8, -8)
+4:2/0 = 0
+4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(4.873226, -8, 3.147293, -5.786956, 3.3503418, -3.1472921, 6.2945824, -1.3198318, 8, -1.2183065, 8, -8)
+
+[sub_resource type="TileSet" id="TileSet_ga762"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_x4u1r")
+
+[node name="Blocks" type="TileMapLayer" unique_id=905722091]
+tile_map_data = PackedByteArray("AAACABIAAAAAAAAAAAACABMAAAAAAAEAAAACABQAAAAAAAIAAAADABIAAAABAAAAAAADABMAAAABAAEAAAADABQAAAABAAIAAAAEABIAAAACAAAAAAAEABMAAAACAAEAAAAEABQAAAACAAIAAAAIABAAAAAAAAAAAAAIABEAAAAAAAEAAAAIABIAAAAAAAIAAAAJABAAAAABAAAAAAAJABEAAAABAAEAAAAJABIAAAABAAIAAAAKABAAAAACAAAAAAAKABEAAAACAAEAAAAKABIAAAACAAIAAAAQAA4AAAAAAAAAAAARAA4AAAABAAAAAAASAA4AAAACAAAAAAAXAAsAAAAAAAAAAAAYAAsAAAABAAAAAAAZAAsAAAACAAAAAAAkAAwAAAAAAAAAAAAlAAwAAAABAAAAAAAmAAwAAAACAAAAAAAeAA4AAAAAAAAAAAAfAA4AAAABAAAAAAAgAA4AAAACAAAAAAA=")
+tile_set = SubResource("TileSet_ga762")

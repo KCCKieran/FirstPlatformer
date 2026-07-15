@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://x1orvdrhcm2k"]
+
+[ext_resource type="Script" uid="uid://sm67osnbfbk6" path="res://player.gd" id="1_tdssn"]
+[ext_resource type="Texture2D" uid="uid://bgbm2ubohcu84" path="res://Character.png" id="1_u6g6h"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pjt0s"]
+atlas = ExtResource("1_u6g6h")
+region = Rect2(0, 0, 17, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wa5vi"]
+atlas = ExtResource("1_u6g6h")
+region = Rect2(17, 0, 17, 23)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ga762"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pjt0s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wa5vi")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ga762"]
+radius = 4.0
+height = 17.0
+
+[node name="Luis" type="CharacterBody2D" unique_id=302723099]
+visibility_layer = 3
+z_index = 1
+script = ExtResource("1_tdssn")
+
+[node name="Character" type="AnimatedSprite2D" parent="." unique_id=1468839636]
+sprite_frames = SubResource("SpriteFrames_ga762")
+autoplay = "default"
+frame_progress = 0.037594642
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=344904510]
+position = Vector2(0, 3)
+shape = SubResource("CapsuleShape2D_ga762")

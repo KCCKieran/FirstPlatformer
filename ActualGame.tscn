@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://cm5skpobl27mj"]
+
+[ext_resource type="PackedScene" uid="uid://b8ix8hebslu15" path="res://MainMap.tscn" id="1_gaup3"]
+[ext_resource type="PackedScene" uid="uid://dp3qfvmn51ek" path="res://Map.tscn" id="2_yemno"]
+[ext_resource type="PackedScene" uid="uid://x1orvdrhcm2k" path="res://MyGuy.tscn" id="3_yemno"]
+[ext_resource type="PackedScene" uid="uid://cgihma628861t" path="res://Death.tscn" id="4_xv6kg"]
+[ext_resource type="PackedScene" uid="uid://joka6mpopoo5" path="res://Star.tscn" id="5_er1wk"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ga762"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_er1wk"]
+radius = 5.0990195
+
+[node name="Node2D" type="Node2D" unique_id=2006833164]
+
+[node name="Background" parent="." unique_id=680310878 instance=ExtResource("2_yemno")]
+
+[node name="Blocks" parent="." unique_id=905722091 instance=ExtResource("1_gaup3")]
+
+[node name="Luis" parent="." unique_id=302723099 instance=ExtResource("3_yemno")]
+position = Vector2(41, 258)
+
+[node name="Camera2D" type="Camera2D" parent="Luis" unique_id=1733739130]
+position = Vector2(280, -78)
+limit_left = 0
+limit_top = 0
+limit_bottom = 360
+limit_smoothed = true
+
+[node name="DeathZone_Map" parent="." unique_id=1708932557 instance=ExtResource("4_xv6kg")]
+position = Vector2(320, 450)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="DeathZone_Map" unique_id=1543814714]
+shape = SubResource("WorldBoundaryShape2D_ga762")
+
+[node name="DeathZone_Star" parent="." unique_id=434743060 instance=ExtResource("4_xv6kg")]
+position = Vector2(281, 210)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone_Star" unique_id=1043912325]
+shape = SubResource("CircleShape2D_er1wk")
+
+[node name="AnimatedSprite2D" parent="DeathZone_Star" unique_id=458024999 instance=ExtResource("5_er1wk")]

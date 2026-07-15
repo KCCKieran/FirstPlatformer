@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://joka6mpopoo5"]
+
+[ext_resource type="Texture2D" uid="uid://b5ecj6aiwvxi6" path="res://Star.aseprite" id="1_22467"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gv6bu"]
+atlas = ExtResource("1_22467")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_12qeu"]
+atlas = ExtResource("1_22467")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f880y"]
+atlas = ExtResource("1_22467")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w3s8k"]
+atlas = ExtResource("1_22467")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vk50b"]
+atlas = ExtResource("1_22467")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_imql4"]
+atlas = ExtResource("1_22467")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_po6kq"]
+atlas = ExtResource("1_22467")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pqaiq"]
+atlas = ExtResource("1_22467")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ga762"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gv6bu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_12qeu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f880y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w3s8k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vk50b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_imql4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_po6kq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pqaiq")
+}],
+"loop": 2,
+"name": &"default",
+"speed": 12.5
+}]
+
+[sub_resource type="GDScript" id="GDScript_22467"]
+script/source = "extends AnimatedSprite2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=458024999]
+sprite_frames = SubResource("SpriteFrames_ga762")
+autoplay = "default"
+script = SubResource("GDScript_22467")
